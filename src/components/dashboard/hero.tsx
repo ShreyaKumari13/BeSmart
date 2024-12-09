@@ -53,7 +53,7 @@ export function Hero() {
 
 
 
-                        <p className="text-sm mt-4 opacity-80">
+                        <p className="text-sm mt-4 opacity-80 text-left">
                             *Optional if type of information is unknown
                         </p>
                     </div>
