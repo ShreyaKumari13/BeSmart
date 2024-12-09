@@ -145,7 +145,7 @@ export default function FeatureList() {
               textAlign: 'left',
             }}
           >
-            At <span style={{ fontWeight: 700, color: '#1C1C1C' }}>BESMART</span>, we&apos;re committed to helping businesses and individuals navigate the digital world securely. Scams can happen to anyone, but with the right tools and awareness, you can protect yourself and your assets.
+            At <span style={{ fontWeight: 700, color: '#1C1C1C' }}>BESMART</span>, we&#39;re committed to helping businesses and individuals navigate the digital world securely. Scams can happen to anyone, but with the right tools and awareness, you can protect yourself and your assets.
           </p>
           <p
             className={`${raleway.className}`}
@@ -165,4 +165,3 @@ export default function FeatureList() {
     </div>
   )
 }
-

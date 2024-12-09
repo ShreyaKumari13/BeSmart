@@ -31,7 +31,7 @@ export default function RiskMeter() {
             }}>
               Red represents
               <br />
-              "High risk"
+              &quot;High risk&quot;
             </h3>
             <p className="text-sm" style={{
                 color: '#F3363F',
@@ -70,7 +70,7 @@ export default function RiskMeter() {
             }}>
               Yellow represents
               <br />
-              "Possible risk"
+              &quot;Possible risk&quot;
             </h3>
             <p className="text-sm" style={{
                 color: '#F7C63D',
@@ -108,7 +108,7 @@ export default function RiskMeter() {
             }}>
               Green means
               <br />
-              "No record"
+              &quot;No record&quot;
             </h3>
             <p className="text-sm" style={{
                 color: '#54BC5D',
