@@ -1,8 +1,6 @@
 'use client';
 
 import { Raleway } from 'next/font/google';
-import Image from 'next/image';
-import Link from 'next/link';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
@@ -16,7 +14,7 @@ export function Hero() {
                             Protecting you from online scams in a fast, reliable, and user-friendly way.
                         </h1>
                         <p className={`${raleway.className} text-lg mb-8`}>
-                            Fast, reliable, and user-friendly detection to keep you safe, with "BeSmart"!
+                            Fast, reliable, and user-friendly detection to keep you safe, with &quot;BeSmart&quot;!
                         </p>
                         <div className="flex items-center gap-2 max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-lg p-2">
                             <select className="w-[120px] bg-white/90 text-black py-2 px-3 rounded-md text-sm">

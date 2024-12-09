@@ -24,7 +24,7 @@ export function Navbar() {
     return `
       ${isScrolled ? 'text-black' : 'text-white'}
       text-[20px]
-      font-[300]
+      font-[${isActive ? '700' : '300'}]
       leading-[23.48px]
       font-raleway
       text-left
