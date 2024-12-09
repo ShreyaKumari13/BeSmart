@@ -103,7 +103,7 @@ export default function FeatureList() {
           <ol className="space-y-4 list-decimal pl-5">
             <li className={`${raleway.className}`}>
               <span className="font-semibold">Enter Suspicious Details:</span>{" "}
-              Whether it's a phone number, website, or social media handle, simply
+              Whether it&apos;s a phone number, website, or social media handle, simply
               type it into our Scam Detector tool.
             </li>
             <li className={`${raleway.className}`}>
@@ -112,7 +112,7 @@ export default function FeatureList() {
               of scams and fraud attempts.
             </li>
             <li className={`${raleway.className}`}>
-              <span className="font-semibold">Instant Results:</span> You'll
+              <span className="font-semibold">Instant Results:</span> You&apos;ll
               receive a risk rating and a recommendation. High-risk entries will be
               flagged as potential scams, giving you a clear guide on how to
               proceed.
