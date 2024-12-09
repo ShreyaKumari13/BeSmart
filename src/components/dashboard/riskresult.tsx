@@ -23,7 +23,7 @@ export default function RiskResult() {
 
           {/* Subheader */}
           <p className="text-gray-700">
-            "While no record exists, it's important to remain cautious. Follow these tips to stay safe in the digital world."
+            &quot;While no record exists, it&apos;s important to remain cautious. Follow these tips to stay safe in the digital world.&quot;
           </p>
 
           {/* Tips Section */}
@@ -37,7 +37,7 @@ export default function RiskResult() {
               <li>• Use complete URLs or detailed information for more accurate results.</li>
               <li>• Confirm the identity of the counterparty before making payments or sharing sensitive data.</li>
               <li>• Never share login credentials, credit card data, or personal details unless you trust the platform.</li>
-              <li>• Don't click on links or attachments from unknown or unverified sources.</li>
+              <li>• Don&apos;t click on links or attachments from unknown or unverified sources.</li>
               <li>• If you suspect a scam, report it to local authorities or the e-Report Centre.</li>
             </ul>
           </div>
@@ -58,4 +58,3 @@ export default function RiskResult() {
     </div>
   );
 }
-

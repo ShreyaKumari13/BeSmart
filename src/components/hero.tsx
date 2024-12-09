@@ -30,7 +30,7 @@ export function Hero() {
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-white text-center px-4">
                     <div className="bg-[#1A281F4D] p-8 rounded-lg max-w-3xl">
                         <h1 className={`${raleway.className} text-[34px] font-semibold leading-[39.92px] mb-4`}>
-                            Welcome to "BESMART" Scam Detector
+                            Welcome to &quot;BESMART&quot; Scam Detector
                         </h1>
                         <p className={`${raleway.className} text-2xl font-normal leading-[28.18px] mb-6`}>
                             Protecting you from online scams in a fast, reliable, and user-friendly way, with &quot;BeSmart&quot;!
@@ -61,4 +61,3 @@ export function Hero() {
         </div>
     );
 }
-
