@@ -33,7 +33,7 @@ export function Hero() {
                             Welcome to &quot;BESMART&quot; Scam Detector
                         </h1>
                         <p className={`${raleway.className} text-2xl font-normal leading-[28.18px] mb-6`}>
-                            Protecting you from online scams in a fast, reliable, and user-friendly way, with &quot;BeSmart&quot;!
+                            Protecting you from online scams in a fast, reliable, and user-friendly way.
                         </p>
                         <p className={`${raleway.className} text-2xl font-semibold leading-[28.18px] mb-4`}>
                             Key Features Overview:

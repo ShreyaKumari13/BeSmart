@@ -1,130 +1,75 @@
 import Image from 'next/image';
+import { Shield, Ban, Monitor } from 'lucide-react';
 
 export default function RiskMeter() {
   return (
-    <div className="w-full max-w-7xl mx-auto pt-8 pb-16">
-      <h2 className="text-2xl font-bold text-center mb-8 ">
-        The search results of BeSmart will be indicated in{" "}
-        <span className="text-cyan-400">different</span> colors
-      </h2>
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="md:w-3/5">
+          <h2 className="text-2xl font-bold mb-4 font-raleway">
+            What can I do to browse safely?
+          </h2>
+          <p className="text-gray-600 mb-8 font-raleway">
+            Online scams cost money. These basic tips can save you from the trouble.
+          </p>
+          
+          <div className="space-y-6">
+            {/* Check website safety */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <Shield className="w-8 h-8 text-[#68C5CC]" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1 font-raleway">Check website safety</h3>
+                <p className="text-gray-600 text-sm font-raleway">
+                  Scan site URLs with the free website checker.
+                </p>
+              </div>
+            </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* High Risk Card */}
-        <div className="bg-[#FFEBEB] rounded-2xl p-6">
-          <div className="flex justify-center mb-4">
-            <Image
-              src="/images/image 2.png"
-              alt="High Risk Meter"
-              width={350}
-              height={250}
-              className="w-58 h-40 object-contain"
-            />
-          </div>
-          <div className="text-center">
-            <h3 className="font-bold text-xl mb-2" style={{
-              color: '#F3363F',
-              fontFamily: 'Raleway',
-              fontSize: '24px',
-              fontWeight: 700,
-              lineHeight: '28.18px',
-              textAlign: 'center'
-            }}>
-              Red represents
-              <br />
-              &quot;High risk&quot;
-            </h3>
-            <p className="text-sm" style={{
-                color: '#F3363F',
-                fontFamily: 'Raleway',
-                fontSize: '18px',
-                fontWeight: 400,
-                lineHeight: '21.13px',
-                textAlign: 'center'
-              }}>
-              The input information is related to scam report,
-              <br />
-              or high cyber security risk
-            </p>
+            {/* Unsure? Don't click */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <Ban className="w-8 h-8 text-[#68C5CC]" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1 font-raleway">Unsure? Don't click.</h3>
+                <p className="text-gray-600 text-sm font-raleway">
+                  Suspicious links and online ads are often more than you bargain for.
+                </p>
+              </div>
+            </div>
+
+            {/* Get protection */}
+            <div className="flex gap-4">
+              <div className="flex-shrink-0">
+                <Monitor className="w-8 h-8 text-[#68C5CC]" />
+              </div>
+              <div>
+                <h3 className="font-semibold mb-1 font-raleway">Get protection for all devices</h3>
+                <p className="text-gray-600 text-sm font-raleway">
+                  Our all-in-one security app protects you even when you don't suspect a scam.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Medium Risk Card */}
-        <div className="bg-[#FFF8DC] rounded-2xl p-6">
-          <div className="flex justify-center mb-4">
+        <div className="md:w-2/5">
+          <div className="relative">
+            {/* <div className="absolute -top-2 -left-2 w-8 h-8 bg-blue-500 rounded-tl-lg" />
+            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-500 rounded-br-lg" /> */}
             <Image
-              src="/images/image 3.png"
-              alt="Medium Risk Meter"
-              width={350}
-              height={250}
-              className="w-58 h-40 object-contain"
+              src="/images/image 9.png"
+              alt="Person using a mobile device safely"
+              width={400}
+              height={300}
+              className="rounded-2xl w-full h-auto relative z-10"
             />
-          </div>
-          <div className="text-center">
-            <h3 className=" font-bold text-xl mb-2" style={{
-                color: '#F7C63D',
-              fontFamily: 'Raleway',
-              fontSize: '24px',
-              fontWeight: 700,
-              lineHeight: '28.18px',
-              textAlign: 'center'
-            }}>
-              Yellow represents
-              <br />
-              &quot;Possible risk&quot;
-            </h3>
-            <p className="text-sm" style={{
-                color: '#F7C63D',
-                fontFamily: 'Raleway',
-                fontSize: '18px',
-                fontWeight: 400,
-                lineHeight: '21.13px',
-                textAlign: 'center'
-              }}>
-              Similar fraud report information is matched,
-              <br />
-              or medium high cyber security risk
-            </p>
-          </div>
-        </div>
-
-        {/* No Risk Card */}
-        <div className="bg-[#D3FFD8] rounded-2xl p-6">
-          <div className="flex justify-center mb-4">
-            <Image
-              src="/images/image 4.png"
-              alt="No Risk Meter"
-              width={350}
-              height={250}
-              className="w-58 h-40 object-contain"
-            />
-          </div>
-          <div className="text-center">
-            <h3 className="font-bold text-xl mb-2" style={{
-              fontFamily: 'Raleway',
-              fontSize: '24px',
-              fontWeight: 700,
-              lineHeight: '28.18px',
-              textAlign: 'center'
-            }}>
-              Green means
-              <br />
-              &quot;No record&quot;
-            </h3>
-            <p className="text-sm" style={{
-                color: '#54BC5D',
-                fontFamily: 'Raleway',
-                fontSize: '18px',
-                fontWeight: 400,
-                lineHeight: '21.13px',
-                textAlign: 'center'
-              }}>
-              No report, but doesn’t mean risk free.
-              <br />
-              You shall stay alert at all times
-            </p>
           </div>
         </div>
       </div>
     </div>
   );
 }
+

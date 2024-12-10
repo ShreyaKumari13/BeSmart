@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
-import  FeatureList  from "@/components/featurelist";
 import BeSmartSection from "@/components/besmartsection"
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <BeSmartSection />
-      <FeatureList />
     </main>
   )
 }
