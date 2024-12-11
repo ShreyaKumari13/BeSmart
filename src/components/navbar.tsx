@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search } from 'lucide-react';
+import { Search, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,16 +24,15 @@ export function Navbar() {
     const isActive = pathname === path;
     return `
       ${isScrolled ? 'text-black' : 'text-white'}
-      text-[20px]
+      text-[18px]
       font-[${isActive ? '700' : '300'}]
-      leading-[23.48px]
+      leading-[23px]
       font-raleway
-      text-left
       hover:font-[700] hover:${isScrolled ? 'text-black' : 'text-white'}
     `;
   };
 
-  const getIconStyle = () => `
+  const getIconStyle = () => ` 
     ${isScrolled ? 'text-black' : 'text-white'}
     hover:${isScrolled ? 'text-gray-700' : 'text-blue-400'}
     transition-colors
@@ -51,7 +51,7 @@ export function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <div className="relative w-[100px] h-[80px]">
+            <div className="relative w-[80px] h-[60px] sm:w-[100px] sm:h-[80px]">
               <Image
                 src="/images/image 1.png"
                 alt="BeSmart Logo"
@@ -62,9 +62,22 @@ export function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="flex-1 ml-10">
-            <ul className="flex items-center justify-end gap-10">
+          {/* Hamburger Menu for Mobile */}
+          <button
+            className="lg:hidden block text-2xl"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Navigation Menu"
+          >
+            {isMenuOpen ? <X className={getIconStyle()} /> : <Menu className={getIconStyle()} />}
+          </button>
+
+          {/* Desktop & Mobile Navigation */}
+          <div
+            className={`lg:flex flex-1 items-center justify-end ${
+              isMenuOpen ? 'block' : 'hidden'
+            } lg:block`}
+          >
+            <ul className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 mt-4 lg:mt-0">
               <li>
                 <Link href="/" className={getLinkStyle('/')}>
                   Home
