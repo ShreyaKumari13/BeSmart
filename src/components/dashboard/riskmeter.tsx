@@ -33,7 +33,7 @@ export default function RiskMeter() {
                 <Ban className="w-8 h-8 text-[#68C5CC]" />
               </div>
               <div>
-                <h3 className="font-semibold mb-1 font-raleway">Unsure? Don't click.</h3>
+                <h3 className="font-semibold mb-1 font-raleway">Unsure? Don&apos;t click.</h3>
                 <p className="text-gray-600 text-sm font-raleway">
                   Suspicious links and online ads are often more than you bargain for.
                 </p>
@@ -48,7 +48,7 @@ export default function RiskMeter() {
               <div>
                 <h3 className="font-semibold mb-1 font-raleway">Get protection for all devices</h3>
                 <p className="text-gray-600 text-sm font-raleway">
-                  Our all-in-one security app protects you even when you don't suspect a scam.
+                  Our all-in-one security app protects you even when you don&apos;t suspect a scam.
                 </p>
               </div>
             </div>
@@ -72,4 +72,3 @@ export default function RiskMeter() {
     </div>
   );
 }
-

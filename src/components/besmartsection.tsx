@@ -117,7 +117,7 @@ const BeSmartSection: React.FC = () => {
                             What We Do?
                         </h2>
                         <p className="text-center font-raleway text-base leading-relaxed">
-                            Our <span className="font-semibold">Scam Detector</span> uses advanced algorithms to analyze potential scam activities. Simply enter the suspicious details into our tool, and within seconds, our system will give you an evaluation and risk rating, helping you avoid falling victim to fraud. Whether you're unsure about a link in an email or a phone call, our tool gives you the peace of mind to know whether it's a legitimate interaction or a scam.
+                            Our <span className="font-semibold">Scam Detector</span> uses advanced algorithms to analyze potential scam activities. Simply enter the suspicious details into our tool, and within seconds, our system will give you an evaluation and risk rating, helping you avoid falling victim to fraud. Whether you&apos;re unsure about a link in an email or a phone call, our tool gives you the peace of mind to know whether it&apos;s a legitimate interaction or a scam.
                         </p>
                     </div>
                 </div>
@@ -163,7 +163,7 @@ const BeSmartSection: React.FC = () => {
                                 <li className="flex gap-3">
                                     <span className="font-bold text-lg">1.</span>
                                     <span className="font-raleway font-medium">
-                                        <span className="font-bold">Enter Suspicious Details:</span> Whether it's a phone number, website, or social media handle, simply type it into our Scam Detector tool.
+                                        <span className="font-bold">Enter Suspicious Details:</span> Whether it&apos;s a phone number, website, or social media handle, simply type it into our Scam Detector tool.
                                     </span>
                                 </li>
                                 <li className="flex gap-3">
@@ -175,7 +175,7 @@ const BeSmartSection: React.FC = () => {
                                 <li className="flex gap-3">
                                     <span className="font-bold text-lg">3.</span>
                                     <span className="font-raleway font-medium">
-                                        <span className="font-bold">Instant Results:</span> You'll receive a risk rating and a recommendation. High-risk entries will be flagged as potential scams, giving you a clear guide on how to proceed.
+                                        <span className="font-bold">Instant Results:</span> You&apos;ll receive a risk rating and a recommendation. High-risk entries will be flagged as potential scams, giving you a clear guide on how to proceed.
                                     </span>
                                 </li>
                             </ol>
@@ -197,4 +197,3 @@ const BeSmartSection: React.FC = () => {
 };
 
 export default BeSmartSection;
-
