@@ -5,16 +5,14 @@ import { MainLayout } from '@/components/layouts/main-layout';
 import { supabase } from '@/lib/supabase';
 
 interface PageProps {
-    params: {
-        id: string;
-    };
+    params: Promise<{ id: string; }>;
 }
 
 export default async function ResultPage({ params }: PageProps) {
     const { data } = await supabase
         .from('analysis_requests')
         .select('query, type')
-        .eq('id', params.id)
+        .eq('id', (await params).id)
         .single();
 
     return (
