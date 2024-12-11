@@ -24,7 +24,7 @@ export function Navbar() {
     return `
       ${isScrolled ? 'text-black' : 'text-white'}
       text-[20px]
-      font-[${isActive ? '700' : '300'}]
+      font-[300]
       leading-[23.48px]
       font-raleway
       text-left
@@ -66,27 +66,27 @@ export function Navbar() {
           <div className="flex-1 ml-10">
             <ul className="flex items-center justify-end gap-10">
               <li>
-                <Link href="/dashboard" className={getLinkStyle('/dashboard')}>
+                <Link href="/dashboard" className={getLinkStyle('/')}>
                   Dashboard
                 </Link>
               </li>
               <li>
-                <Link href="/alert" className={getLinkStyle('/alert')}>
+                <Link href="/alert" className={getLinkStyle('/about')}>
                   Alert
                 </Link>
               </li>
               <li>
-                <Link href="/cases" className={getLinkStyle('/cases')}>
+                <Link href="/cases" className={getLinkStyle('/how-it-works')}>
                   Cases
                 </Link>
               </li>
               <li>
-                <Link href="/reports" className={getLinkStyle('/reports')}>
+                <Link href="/reports" className={getLinkStyle('/contact')}>
                   Reports
                 </Link>
               </li>
               <li>
-                <Link href="/settings" className={getLinkStyle('/settings')}>
+                <Link href="/settings" className={getLinkStyle('/contact')}>
                   Settings
                 </Link>
               </li>
