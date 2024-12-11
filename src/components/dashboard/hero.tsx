@@ -8,7 +8,7 @@ import { supabase } from '@/lib/supabase';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
-export function Hero({ query }: { query?: string }) {
+export function Hero({ query, type }: { query?: string; type?: string }) {
     const router = useRouter();
     const [searchInput, setSearchInput] = useState('');
     const [searchType, setSearchType] = useState('');

@@ -13,7 +13,7 @@ export function MainLayout({ children, query, type }: MainLayoutProps) {
     return (
         <div className="min-h-screen flex flex-col">
             <Navbar />
-            <Hero query={query} type={type} />
+            <Hero query={query} type={type} /> {/* Ensure both props are passed */}
             <div className="flex-grow">
                 {children}
             </div>
