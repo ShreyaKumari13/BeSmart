@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export function Navbar() {
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -20,8 +21,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const getLinkStyle = (path: string) => {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const getLinkStyle = (/* eslint-disable @typescript-eslint/no-unused-vars */ path: string) => {
     const isActive = false;
     return `
       ${isScrolled ? 'text-black' : 'text-white'}
