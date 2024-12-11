@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search } from 'lucide-react';
+import { Search, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +46,10 @@ export function Navbar() {
     transition-colors duration-300
   `;
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <nav className={navbarStyle}>
       <div className="container mx-auto px-4 lg:px-32">
@@ -62,9 +67,18 @@ export function Navbar() {
             </div>
           </Link>
 
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden text-3xl"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X /> : <Menu />}
+          </button>
+
           {/* Desktop Navigation */}
-          <div className="flex-1 ml-10">
-            <ul className="flex items-center justify-end gap-10">
+          <div className="hidden lg:flex flex-1 ml-10">
+            <ul className="flex items-center justify-end gap-10 w-full">
               <li>
                 <Link href="/dashboard" className={getLinkStyle('/')}>
                   Dashboard
@@ -102,7 +116,50 @@ export function Navbar() {
             </ul>
           </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden">
+            <ul className="flex flex-col items-center gap-4 py-4">
+              <li>
+                <Link href="/dashboard" className={getLinkStyle('/')}>
+                  Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link href="/alert" className={getLinkStyle('/about')}>
+                  Alert
+                </Link>
+              </li>
+              <li>
+                <Link href="/cases" className={getLinkStyle('/how-it-works')}>
+                  Cases
+                </Link>
+              </li>
+              <li>
+                <Link href="/reports" className={getLinkStyle('/contact')}>
+                  Reports
+                </Link>
+              </li>
+              <li>
+                <Link href="/settings" className={getLinkStyle('/contact')}>
+                  Settings
+                </Link>
+              </li>
+              <li>
+                {/* Search Icon */}
+                <button
+                  className={getIconStyle()}
+                  aria-label="Search"
+                >
+                  <Search className="w-5 h-5" />
+                </button>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );
 }
+
