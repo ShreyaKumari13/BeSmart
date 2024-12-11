@@ -8,7 +8,7 @@ import { supabase } from '@/lib/supabase';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
-export function Hero({ query, type }: { query?: string; type?: string }) {
+export function Hero({ query }: { query?: string }) {
     const router = useRouter();
     const [searchInput, setSearchInput] = useState('');
     const [searchType, setSearchType] = useState('');
@@ -93,7 +93,7 @@ export function Hero({ query, type }: { query?: string; type?: string }) {
         setError('');
 
         try {
-            const { data, error: supabaseError } = await supabase
+            const { data } = await supabase
                 .from('analysis_requests')
                 .insert([
                     {
@@ -106,10 +106,6 @@ export function Hero({ query, type }: { query?: string; type?: string }) {
                 ])
                 .select()
                 .single();
-
-            if (supabaseError) {
-                throw supabaseError;
-            }
 
             const redirectUrl = `/results/${data.id}`;
             router.push(redirectUrl);

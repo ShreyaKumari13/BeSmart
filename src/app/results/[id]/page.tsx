@@ -1,11 +1,8 @@
 'use server';
 
-import { Raleway } from 'next/font/google';
 import RiskResult from '@/components/dashboard/riskresult';
 import { MainLayout } from '@/components/layouts/main-layout';
 import { supabase } from '@/lib/supabase';
-
-const raleway = Raleway({ subsets: ['latin'] });
 
 interface PageProps {
     params: {
