@@ -109,7 +109,7 @@ export function Hero({ query }: { query?: string }) {
 
             const redirectUrl = `/results/${data.id}`;
             router.push(redirectUrl);
-        } catch (err) {
+        } catch {
             setError('Failed to submit analysis request. Please try again.');
         } finally {
             setIsLoading(false);
