@@ -4,8 +4,8 @@ import { Shield, Ban, Monitor } from 'lucide-react';
 export default function RiskMeter() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="flex flex-col md:flex-row gap-8 items-start">
-        <div className="md:w-3/5">
+      <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
+        <div className="lg:w-3/5 text-center lg:text-left">
           <h2 className="text-2xl font-bold mb-4 font-raleway">
             What can I do to browse safely?
           </h2>
@@ -15,7 +15,7 @@ export default function RiskMeter() {
           
           <div className="space-y-6">
             {/* Check website safety */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
               <div className="flex-shrink-0">
                 <Shield className="w-8 h-8 text-[#68C5CC]" />
               </div>
@@ -28,7 +28,7 @@ export default function RiskMeter() {
             </div>
 
             {/* Unsure? Don't click */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
               <div className="flex-shrink-0">
                 <Ban className="w-8 h-8 text-[#68C5CC]" />
               </div>
@@ -41,7 +41,7 @@ export default function RiskMeter() {
             </div>
 
             {/* Get protection */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start">
               <div className="flex-shrink-0">
                 <Monitor className="w-8 h-8 text-[#68C5CC]" />
               </div>
@@ -55,16 +55,14 @@ export default function RiskMeter() {
           </div>
         </div>
 
-        <div className="md:w-2/5">
-          <div className="relative">
-            {/* <div className="absolute -top-2 -left-2 w-8 h-8 bg-blue-500 rounded-tl-lg" />
-            <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-500 rounded-br-lg" /> */}
+        <div className="lg:w-2/5 flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-xs">
             <Image
               src="/images/image 9.png"
               alt="Person using a mobile device safely"
               width={400}
               height={300}
-              className="rounded-2xl w-full h-auto relative z-10"
+              className="rounded-2xl w-full h-auto"
             />
           </div>
         </div>

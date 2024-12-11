@@ -123,23 +123,23 @@ export function Hero({ query, type }: { query?: string; type?: string }) {
     const isButtonDisabled = !searchInput || !searchType || !!inputError || isLoading;
 
     return (
-        <div className="relative h-[70vh]">
-            <section className="h-full bg-gradient-to-br from-[#B4E7ED] via-[#68C5CC] to-[#68C5CC]">
-                <div className="container mx-auto flex flex-col items-center justify-center h-full px-4">
+        <div className="relative min-h-[70vh]">
+            <section className="min-h-full bg-gradient-to-br from-[#B4E7ED] via-[#68C5CC] to-[#68C5CC] py-12 sm:py-16 md:py-20 lg:py-24">
+                <div className="container mx-auto flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl w-full">
-                        <h1 className={`${raleway.className} text-3xl sm:text-4xl font-bold mb-4 text-center text-white`}>
+                        <h1 className={`${raleway.className} text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center text-white`}>
                             Protecting you from online scams in a fast, reliable, and user-friendly way.
                         </h1>
-                        <p className={`${raleway.className} text-lg mb-8 text-center text-white`}>
+                        <p className={`${raleway.className} text-base sm:text-lg mb-8 text-center text-white`}>
                             Fast, reliable, and user-friendly detection to keep you safe, with &quot;BeSmart&quot;!
                         </p>
                         <form onSubmit={handleAnalyze} className="flex flex-col items-center gap-2 bg-white/5 backdrop-blur-sm rounded-lg p-4">
-                            <div className="flex items-center gap-1 w-full">
-                                <div className="relative">
+                            <div className="flex flex-col sm:flex-row items-center gap-2 w-full">
+                                <div className="relative w-full sm:w-auto">
                                     <select
                                         value={category}
                                         onChange={(e) => setCategory(e.target.value)}
-                                        className="appearance-none w-[60px] bg-white text-gray-400 py-2.5 px-2 rounded-lg cursor-pointer font-raleway text-sm focus:outline-none"
+                                        className="appearance-none w-full sm:w-[60px] bg-white text-gray-400 py-2.5 px-2 rounded-lg cursor-pointer font-raleway text-sm focus:outline-none"
                                     >
                                         <option value="url">   </option>
                                         <option value="url">URL</option>
@@ -153,13 +153,13 @@ export function Hero({ query, type }: { query?: string; type?: string }) {
                                     value={searchInput}
                                     onChange={(e) => setSearchInput(e.target.value)}
                                     placeholder="URL, email, phone, platform A/C, payment A/C, etc"
-                                    className="flex-1 bg-white text-gray-700 py-2.5 px-3 rounded-lg font-raleway text-sm focus:outline-none placeholder:text-gray-400"
+                                    className="w-full sm:flex-1 bg-white text-gray-700 py-2.5 px-3 rounded-lg font-raleway text-sm focus:outline-none placeholder:text-gray-400"
                                 />
-                                <div className="relative">
+                                <div className="relative w-full sm:w-auto">
                                     <select
                                         value={searchType}
                                         onChange={(e) => setSearchType(e.target.value)}
-                                        className="appearance-none w-[140px] bg-white text-gray-400 py-2.5 px-3 pr-8 rounded-lg cursor-pointer font-raleway text-sm focus:outline-none"
+                                        className="appearance-none w-full sm:w-[140px] bg-white text-gray-400 py-2.5 px-3 pr-8 rounded-lg cursor-pointer font-raleway text-sm focus:outline-none"
                                     >
                                         <option value="">Please Select Type</option>
                                         <option value="platform_username">Platform Username</option>
@@ -174,7 +174,7 @@ export function Hero({ query, type }: { query?: string; type?: string }) {
                                 <button
                                     type="submit"
                                     disabled={isButtonDisabled}
-                                    className={`${raleway.className} w-[140px] bg-[#5bbfce] hover:bg-[#4aa9b8] text-white py-2.5 px-6 rounded-lg text-sm font-semibold transition-colors focus:outline-none ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                    className={`${raleway.className} w-full sm:w-[140px] bg-[#5bbfce] hover:bg-[#4aa9b8] text-white py-2.5 px-6 rounded-lg text-sm font-semibold transition-colors focus:outline-none ${isButtonDisabled ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 >
                                     {isLoading ? 'Analyzing...' : 'Analyze Now'}
                                 </button>
