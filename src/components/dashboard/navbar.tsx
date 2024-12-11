@@ -21,7 +21,8 @@ export function Navbar() {
   }, []);
 
   const getLinkStyle = (path: string) => {
-    const isActive = pathname === path;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const isActive = false;
     return `
       ${isScrolled ? 'text-black' : 'text-white'}
       text-[20px]
@@ -162,4 +163,3 @@ export function Navbar() {
     </nav>
   );
 }
-
