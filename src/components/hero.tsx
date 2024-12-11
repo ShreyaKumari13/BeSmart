@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { Raleway } from 'next/font/google';
 import Image from 'next/image';

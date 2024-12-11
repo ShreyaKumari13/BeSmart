@@ -3,7 +3,7 @@ import { Shield, Ban, Monitor } from 'lucide-react';
 
 export default function RiskMeter() {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row gap-8 items-start">
         <div className="md:w-3/5">
           <h2 className="text-2xl font-bold mb-4 font-raleway">
