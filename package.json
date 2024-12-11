@@ -11,6 +11,8 @@
   "dependencies": {
     "@fontsource/raleway": "^5.1.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@supabase/supabase-js": "^2.47.3",
+    "axios": "^1.7.9",
     "besmart-detector": "file:",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
