@@ -4,9 +4,7 @@ import { useSearchParams } from 'next/navigation';
 import { Raleway } from 'next/font/google';
 import RiskResult from '@/components/dashboard/riskresult';
 import {Footer} from '@/components/footer';
-import { Navbar } from '@/components/dashboard/navbar';
-import { Hero } from '@/components/dashboard/hero';
-
+import { MainLayout } from '@/components/layouts/main-layout';
 
 const raleway = Raleway({ subsets: ['latin'] });
 
@@ -15,14 +13,10 @@ export default function ResultsPage() {
     const query = searchParams.get('query') || '';
     const type = searchParams.get('type') || '';
 
-
     return (
-        <div className="min-h-screen flex flex-col">
-                  <Navbar />
-            <Hero query={query} type={type} />
-            <div className="flex-grow">
-                <RiskResult/>
-            </div>
-        </div>
+        <MainLayout query={query} type={type}>
+            <RiskResult/>
+            {/* <Footer /> */}
+        </MainLayout>
     );
 }
